@@ -1,0 +1,44 @@
+<!--Faire une interpolation. L'interpolation ne marche pas pour les objets , il faut toujours présicer le type-->
+
+   
+
+    <img class="center" src="https://spvie.dokent.com/pluginfile.php/1/theme_space/customlogotopbar/1664526857/dokent-infi-spvie-H.png" />
+   
+<h1 class="center blue-text text-darken-2">AKWABA CHEZ SPVIE</h1>
+<h1 class="center pink-text text-pink lighten-3">Liste des services</h1>
+<input 
+#input (keyup.enter)="selectService(input.value)"
+type="number" style="height: 10px;">
+<p *ngIf="serviceSelected" class="center  pink-text text-pink lighten-3"> 
+    Vous avez chosit : {{serviceSelected.name}}
+</p>
+<div class="container">
+    <div class="row">
+        
+            <div *ngFor=" let service of service "> 
+                <div class="col s6">
+                
+            <div class="card horizontal z-depth-1 hoverable  " style="border: 2px solid rgb(78, 213, 211)">
+                  <div class="card-image ">
+                <img class="responsive-img" src="{{service.picture}}" style="height: 100px; display: inline-block;" />
+                
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                        
+                        <p class="green-text text-green lighten-3" style="font-size:bold ;">{{service.name}}</p>
+                        <p class="pink-text text-pink lighten-3"><small>{{service.created}}</small></p>
+                   </div>
+                    </div>
+           </div>
+          
+           
+        </div>
+        
+    
+    </div>
+</div>
+ 
+    
+    
+    
