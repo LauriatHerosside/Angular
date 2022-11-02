@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+    <div class="container">
+        <div class="row ">
+          <!-- <div *ngFor=" let service of service ">  -->
+          <div class="col-lg-4 py-4" *ngFor=" let service of service ">
+            <div class="card horizontal z-depth-1 hoverable  " SpvieBorderCard>
+              <div class="card-image">
+                <img class="responsive-img" src="{{service.picture}}" style="height: 100px; display: inline-block;" />
+              </div>
+      
+              <div class="card-body">
+                <h5 class="card-title">
+                  <p class="black-text text-green lighten-3" style="font-size:bold ;">{{service.name}}</p>
+                </h5>
+      
+                <p class="black-text text-pink lighten-3"><small>{{service.created}}</small></p>
+                <a routerLink="/detail-service/`id`" class="btn btn-primary" style="color: black; font-size: bold;">Voir Plus</a>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+  <div class="container my-5">
+
+
+  <app-footer></app-footer>
+  </div>
